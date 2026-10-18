@@ -108,14 +108,3 @@ app.register_blueprint(catalogo_bp)
 | POST | `/ejemplares/<id>/eliminar` | Eliminar ejemplar |
 | GET | `/api/libros` | Búsqueda en JSON (mismos parámetros que `/libros`) |
 | GET | `/api/libros/<id>/disponibilidad` | Cantidad de ejemplares por estado (JSON) |
-
-## Pruebas rápidas
-
-- Buscar "Garcia" con el selector en *Autor*: devuelve las dos novelas de García Márquez.
-- Abrir "Database System Concepts": muestra 1 de 3 ejemplares disponibles.
-- Intentar eliminar ese libro: se bloquea porque tiene ejemplares y préstamos.
-- Abrir `/api/libros/1/disponibilidad`: devuelve el conteo por estado en JSON.
-
-## Autoría
-
-Integrante 3: gestión del catálogo de libros y ejemplares.
