@@ -12,6 +12,8 @@
         <a href="{{ url_for('catalogo.form_libro') }}">Nuevo libro</a>
         <a href="{{ url_for('usuarios.listar_usuarios') }}"
            {% if request.blueprint == 'usuarios' %}aria-current="page"{% endif %}>Usuarios</a>
+        <a href="{{ url_for('reportes.ver_reportes') }}"
+           {% if request.blueprint == 'reportes' %}aria-current="page"{% endif %}>Reportes</a>
       {% endif %}
       {% if usuario_actual %}
         <a href="{{ url_for('auth.mi_cuenta') }}"
